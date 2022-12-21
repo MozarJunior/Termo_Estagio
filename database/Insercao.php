@@ -31,7 +31,7 @@ class Insercao
                 aria-label=\"Close\">X</button>
                 </div>";
                 $_SESSION['pessoa'] = $pessoa['ID'];
-                header("location: coleta_dados.php");
+                header("location: inicio.php");
             } catch (mysqli_sql_exception $e) {
                 session_start();
                 $_SESSION['cadastro'] = "<div class=\"alert alert-danger alert-dismissible fade show mt-3\" role=\"alert\">
@@ -64,7 +64,7 @@ class Insercao
                 $query_pessoa = $Mysql->query($pessoa);
                 session_start();
                 $_SESSION['cadastro'] = 'Cadastro realizado com sucesso';
-                header("location: coleta_endereco.php");
+                header("location: inicio.php");
             } catch (mysqli_sql_exception $e) {
                 session_start();
                 $_SESSION['cadastro'] = 'O cadastro não foi realizado';
@@ -88,7 +88,7 @@ class Insercao
             try {
                 session_start();
                 $_SESSION['cadastro'] = 'Cadastro realizado com sucesso';
-                header("location: coleta_academico.php");
+                header("location: inicio.php");
             } catch (mysqli_sql_exception $e) {
                 session_start();
                 $_SESSION['cadastro'] = 'O cadastro não foi realizado';
@@ -116,7 +116,7 @@ class Insercao
                 $query_s = $Mysql->query($code_s);
                 session_start();
                 $_SESSION['cadastro'] = 'Cadastro realizado com sucesso';
-                header("location: coleta_estagio.php");
+                header("location: inicio.php");
             } catch (mysqli_sql_exception $e) {
                 session_start();
                 $_SESSION['cadastro'] = 'O cadastro não foi realizado';

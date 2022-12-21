@@ -30,4 +30,4 @@ $dompdf->render();
 header('Content-type: application/pdf');
 
 // imprime conteudo do pdf na tela
-echo $dompdf->output();
+echo $dompdf->output(); 

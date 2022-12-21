@@ -21,6 +21,30 @@
     <title>SIT - Meus Dados</title>
 </head>
 <body>
+<header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">SIT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="inicio.php">Inicio <span class="sr-only">(Página atual)</span></a>
+                    </li>
+                    <?php if($estudante['PESSOA_ID'] != null && $estudante['ORIENTADOR_ID'] != null && $estudante['SUPERVISOR_ID'] != null){
+                        echo "<li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\"#\">Meus Dados</a>
+                        </li>";
+                        echo "<li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"Pdf.php\">Gerar Termo</a>
+                    </li>";
+                    }?>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <main>
     <div class="container">
         <div class="row">

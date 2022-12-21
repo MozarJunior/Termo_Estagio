@@ -448,7 +448,7 @@ Class Documento
             fwrite($reescreve, $this->pagina3());
             fwrite($reescreve, $this->pagina4());
             fclose($reescreve);
-        }else{
+        }else{ 
             $escreve = fopen($arq, "w");
             fwrite($escreve, $this->baseline());
             fwrite($escreve, $this->tabela_concedente());
